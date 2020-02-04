@@ -18,7 +18,7 @@ export default {
   },
   computed: {
     getLunchMenu() {
-      return this.$store.state.moduleMenu.menus;
+      return this.$store.state.moduleMenu.allMenus;
     }
   },
   watch: {
