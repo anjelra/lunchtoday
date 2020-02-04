@@ -9,8 +9,8 @@ exports.create = (req, res) => {
     }
 
     const menu = new Menu({
-        group_id: req.body.group_id,
-        menu_name: req.body.menu_name 
+        // group_id: req.body.group_id,
+        menu_name: req.body.menu_name
     });
 
     Menu.create(menu, (err, data) => {
@@ -25,21 +25,21 @@ exports.create = (req, res) => {
         } else {
             res.send(data);
         }
-    });    
+    });
 }
 
 // retrieve all menus from the database;
-// exports.findAll = (req, res) => {
-//     Menu.getAll((err, data) => {
-//         if (err) {
-//             res.status(500).send({
-//                 message: err.message
-//             });
-//         } else {
-//             res.send(data);
-//         }
-//     })
-// };
+exports.findAll = (req, res) => {
+    Menu.getAll((err, data) => {
+        if (err) {
+            res.status(500).send({
+                message: err.message
+            });
+        } else {
+            res.send(data);
+        }
+    })
+};
 
 // find a single menu with a menuId
 exports.findOne = (req, res) => {
@@ -70,8 +70,8 @@ exports.update = (req, res) => {
 
     const menu = new Menu({
         menu_id: req.body.menu_id,
-        menu_name: req.body.menu_name,
-        group_id: req.body.group_id
+        menu_name: req.body.menu_name
+        // group_id: req.body.group_id
     });
 
     // eslint-disable-next-line no-console
@@ -107,13 +107,13 @@ exports.delete = (req, res) => {
     }
 
     const menu = new Menu({
-        menu_id: req.body.menu_id,
-        group_id: req.body.group_id
+        menu_id: req.body.menu_id
+        // group_id: req.body.group_id
     });
 
     Menu.remove(
-        req.params.menuId, 
-        menu, 
+        req.params.menuId,
+        menu,
         (err, data) => {
         // eslint-disable-next-line no-console
         console.log('req.params', menu);
