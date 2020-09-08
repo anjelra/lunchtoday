@@ -5,6 +5,9 @@
 # 프로젝트 사용 기술
 vue, mysql, node.js, express, vuex
 
+# 프로젝트 기술 블로그
+<https://app.gitbook.com/@puppy912000/s/todaylunch-project/>
+
 # 프로젝트 셋팅
 
 ## 빌드
