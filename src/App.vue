@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/admin">admin</router-link>
+      <router-link to="/">Home</router-link>
+      <!-- <router-link to="/admin">admin</router-link> -->
     </div>
     <router-view/>
   </div>
@@ -164,11 +164,7 @@ h1{
     border: 1px solid #000;
     padding: 0 10px;
 }
-.wrap-lunchbox{
-}
-.list-lunch{
-    
-}
+
 .current-lunch{
     display: flex;
     justify-content: space-between;
@@ -252,8 +248,8 @@ display: inline-block;width: 45px; height: 45px;background-image: url(data:image
 .sidebar{
     padding: 20px;
     background-color: rgba(0,0,0,0.7);
-    max-heigt: 100%;
-    oveflow-y: scroll;
+    max-height: 100%;
+    overflow-y: scroll;
     width: 300px;
 }
 #map{

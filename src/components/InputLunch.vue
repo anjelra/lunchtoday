@@ -11,7 +11,8 @@
 export default {
   name: 'InputLunch',
   created() {
-    this.$store.dispatch('selectAllGroups');
+    // this.$store.dispatch('selectAllGroups');
+    this.$store.dispatch('selectAllMenus');
   },
   props: {
     

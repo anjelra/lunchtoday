@@ -12,9 +12,9 @@
 <script>
 export default {
   name: 'SideLunch',
-  updated(){
-    this.$store.dispatch('selectAllMenus');
-  },
+  // updated(){
+  //   this.$store.dispatch('selectAllMenus');
+  // },
   computed: {
     getLunchMenu: {
       get: function() {

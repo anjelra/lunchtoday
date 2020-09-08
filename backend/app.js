@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-let port = 3000;
+const port = 3000;
 
 const cors = require('cors');
 app.use(cors());
@@ -20,7 +20,7 @@ const menuGroupRouter = require('./routes/groups.routes');
 const menuRouter = require('./routes/menu.routes');
 
 app.use(express.static('public'));
-app.use('/', indexRouter); // 
+app.use('/', indexRouter);
 app.use('/api/group', menuGroupRouter);     // group
 app.use('/api/menu', menuRouter);           // menu  
 

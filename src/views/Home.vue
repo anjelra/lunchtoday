@@ -27,8 +27,8 @@ export default {
     ViewToday,
     LunchMap
   },
-  created() {
-    this.$store.dispatch('selectAllMenus');
-  }
+  // created() {
+  //   this.$store.dispatch('selectAllMenus');
+  // }
 }
 </script>

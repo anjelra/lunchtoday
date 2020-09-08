@@ -33,7 +33,7 @@ export const storeMenuGroup = {
          // get all menuGroup
         selectAllGroups ( {commit} ) {
             axios
-            .get('http://42.243.134.40:3000/api/group/menuGroup')
+            .get('/api/group/menuGroup')
             .then((res) => {
                 commit('SUCCESS_GET_GROUPS', res.data);
             })
@@ -48,7 +48,7 @@ export const storeMenuGroup = {
             }
 
             axios
-            .post('http://42.243.134.40:3000/api/group/menuGroup', {
+            .post('/api/group/menuGroup', {
                 group_name: context
             })
             .then((res) => {
@@ -66,7 +66,7 @@ export const storeMenuGroup = {
             }
 
             axios
-            .delete('http://42.243.134.40:3000/api/group/menuGroup/' + group_id)
+            .delete('/api/group/menuGroup/' + group_id)
             .then((res) => {
                 // eslint-disable-next-line no-console
                 console.log('DELETE_GROUP_BEFORE', res);
@@ -80,7 +80,7 @@ export const storeMenuGroup = {
             }
 
             axios
-            .put('http://42.243.134.40:3000/api/group/menuGroup/' + context.group_id, {
+            .put('/api/group/menuGroup/' + context.group_id, {
                 group_id: context.group_id,
                 group_name: context.group_name
             })

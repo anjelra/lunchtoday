@@ -41,7 +41,7 @@ export const storeMenu = {
         // select menu one group
         // selectMenusOneGroup ( { commit}, group_id ) {
         //     axios
-        //     .get('http://42.243.134.40:3000/api/menu/menu/' + group_id)
+        //     .get('/api/menu/menu/' + group_id)
         //     .then((res) => {
         //         // eslint-disable-next-line no-console
         //         console.log('selectMenusOneGroup.res', res);
@@ -60,7 +60,7 @@ export const storeMenu = {
             }
 
             axios
-            .post('http://42.243.134.40:3000/api/menu/menu', {
+            .post('/api/menu/menu', {
                 // group_id: context.group_id,
                 menu_name: context
             })
@@ -81,7 +81,7 @@ export const storeMenu = {
             // axios delete 는 원칙적으로 body를 쓸 수 없다.
             // 쓰려면 data로 한번 더 감싸서 보내야 함(191231 새로 알게된 사실)
             axios
-            .delete('http://42.243.134.40:3000/api/menu/menu/' + context, {
+            .delete('/api/menu/menu/' + context, {
                 data: {
                     // group_id: context.group_id,
                     menu_id: context
@@ -100,7 +100,7 @@ export const storeMenu = {
             }
 
             axios
-            .put('http://42.243.134.40:3000/api/menu/menu/' + context.menu_id, {
+            .put('/api/menu/menu/' + context.menu_id, {
                 menu_name: context.menu_name,
                 menu_id: context.menu_id
                 // group_id: context.group_id
@@ -114,7 +114,7 @@ export const storeMenu = {
          // get all menus
          selectAllMenus ( {commit} ) {
             axios
-            .get('http://42.243.134.40:3000/api/menu/menuAll')
+            .get('/api/menu/menuAll')
             .then((res) => {
                 commit('SUCCESS_GET_ALL_MENUS', res.data);
             })
