@@ -6,7 +6,7 @@
 vue, mysql, node.js, express, vuex
 
 # snapshot
-
+![메뉴추가 후 화면 모습](https://user-images.githubusercontent.com/58247170/92437316-93edeb00-f1e1-11ea-877f-d07064ff4eff.png)
 
 # 프로젝트 기술 블로그
 <https://app.gitbook.com/@puppy912000/s/todaylunch-project/>
