@@ -5,6 +5,9 @@
 # 프로젝트 사용 기술
 vue, mysql, node.js, express, vuex
 
+# snapshot
+
+
 # 프로젝트 기술 블로그
 <https://app.gitbook.com/@puppy912000/s/todaylunch-project/>
 
@@ -19,11 +22,10 @@ vue, mysql, node.js, express, vuex
         group_id int,
         menu_id int,
         menu_name varchar(255),
-        delete_yn varchar(255) default('N'),
         hide_yn varchar(255) default('N'),
         PRIMARY KEY(menu_id)
     );
-    
+
     user권한 설정
     $ CREATE USER 'root'@'localhost' IDENTIFIED BY '1720';
     $ FLUSH PRIVILEGES;
