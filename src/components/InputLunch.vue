@@ -1,6 +1,6 @@
 <template>
     <section class="wrap-ipt">
-        <input type="text" class="ipt-lunch" v-model="newMenuName" v-on:keyup.13="addLunch">
+        <input type="text" class="ipt-lunch" v-model="newMenuName" v-on:keypress.enter="addLunch">
         <button class="btn-add" @click="addLunch">메뉴추가</button>
         <button class="btn-spin" @click="spinlunch">오늘 뭐먹을지 돌려보자</button>
         
@@ -46,14 +46,10 @@ export default {
       }
     },
   },
-  watch: {
-    getLunchMenu() {
-      
-    }
-  },
   methods: {
     addLunch() {
       if (this.newMenuName == null) {
+        alert('메뉴를 입력해 주세요.');
         return;
       }
 
@@ -71,7 +67,7 @@ export default {
               this.saveCurrentWheel(rand2);
           }, false);
       } else {
-          alert('메뉴를 입력해 주세요.');
+          alert('돌릴 메뉴 리스트를 입력해 주세요.');
       }
     },
     saveCurrentWheel(current) {
@@ -92,6 +88,3 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>

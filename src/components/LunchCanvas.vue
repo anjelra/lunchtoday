@@ -22,7 +22,6 @@ export default {
     }
   },
   watch: {
-    // WATCH는 이따구로 쓰는거구나
     getLunchMenu(){
       this.drawLunchCanvas();
     }
