@@ -54,6 +54,7 @@ export default {
       }
 
       this.$store.dispatch('insertMenu', this.newMenuName);
+      this.$store.dispatch('selectAllMenus');
     },
     spinlunch() {
       let rand2 = Math.floor(Math.abs(Math.random() * 10000)) + (360/this.getLunchMenu.length) + 1;
@@ -82,6 +83,10 @@ export default {
                 // 정말 이딴식으로 하는것이 맞는가?
                 this.$store.commit('updateResult', {'menu': saveWheel[i].menu, 'color': saveWheel[i].color});
             }
+        }
+
+        if (!this.$store.state.todayLunch || !this.$store.state.currentTxtColor) {
+          alert('결과가 애매합니다. \n 다시 시도해 주세요.');
         }
     },
   }

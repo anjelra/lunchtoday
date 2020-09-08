@@ -25,6 +25,7 @@ export default {
   methods: {
       removeLunch(menu) {
           this.$store.dispatch('deleteMenu', menu.menu_id);
+          this.$store.dispatch('selectAllMenus');
       }
   }
 }
