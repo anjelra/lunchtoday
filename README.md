@@ -12,7 +12,8 @@ vue, mysql, node.js, express, vuex
 
 ## db 
     $ mysql -uroot -p
-        비밀번호 입력(1720)
+    비밀번호 입력(1720)
+
     $ use lunchmenu;
     $ CREATE TABLE lunchmenu.MENU_LIST (
         group_id int,
@@ -22,13 +23,15 @@ vue, mysql, node.js, express, vuex
         hide_yn varchar(255) default('N'),
         PRIMARY KEY(menu_id)
     );
-        user권한 설정
+    
+    user권한 설정
     $ CREATE USER 'root'@'localhost' IDENTIFIED BY '1720';
     $ FLUSH PRIVILEGES;
-        database에 user 권한 부여
+
+    database에 user 권한 부여
     $ GRANT ALL PRIVILEGES ON lunchmenu TO 'root'@'localhost';
     $ FLUSH PRIVILEGES;
-    
+
 ## 빌드
     $ npm run build
 
