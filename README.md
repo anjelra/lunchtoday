@@ -10,12 +10,31 @@ vue, mysql, node.js, express, vuex
 
 # 프로젝트 셋팅
 
+## db 
+    $ mysql -uroot -p
+        비밀번호 입력(1720)
+    $ use lunchmenu;
+    $ CREATE TABLE lunchmenu.MENU_LIST (
+        group_id int,
+        menu_id int,
+        menu_name varchar(255),
+        delete_yn varchar(255) default('N'),
+        hide_yn varchar(255) default('N'),
+        PRIMARY KEY(menu_id)
+    );
+        user권한 설정
+    $ CREATE USER 'root'@'localhost' IDENTIFIED BY '1720';
+    $ FLUSH PRIVILEGES;
+        database에 user 권한 부여
+    $ GRANT ALL PRIVILEGES ON lunchmenu TO 'root'@'localhost';
+    $ FLUSH PRIVILEGES;
+    
 ## 빌드
-    npm run build
+    $ npm run build
 
 ## 서버 켜기
-    cd backend 
-    node app
+    $ cd backend 
+    $ node app
 
 # commit 이 한번에 이뤄진 이유
 프로젝트 진행 당시에 대리님 깃허브를 이용해 작업을 했고, 작업이 어느정도 진행된 후에 clone을 이용하여
